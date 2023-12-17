@@ -44,7 +44,7 @@ const Attendence = () => {
                                 <div className="flex items-center justify-between w-full">
                                     <div className="flex items-center gap-2">
                                         <img src="https://i.imgur.com/zyxf5OP.png" style={{ width: "45px", height: "45px", borderRadius: "50%" }} />
-                                        <h1 style={{ fontWeight: "bold", fontSize: "20px" }}>Students</h1>
+                                        <h1 style={{ fontWeight: "bold", fontSize: "20px" }}>Students Attendence</h1>
                                     </div>
                                     
                                 </div>
@@ -52,7 +52,7 @@ const Attendence = () => {
                         </div>
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-sky-500 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" className="px-4 py-3">Id</th>
                                         <th scope="col" className="px-4 py-3">Profile </th>
