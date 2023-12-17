@@ -76,7 +76,7 @@ const Dashboard = () => {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-            await setDoc(doc(db, "Students", user.uid), {
+            await setDoc(doc(db, "User", user.uid), {
                 name: `${firstName} ${lastName}`,
                 email,
                 phone: number,
