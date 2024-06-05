@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 
 const Dashboard = () => {
-    const router = useRouter()
     const [selectedUser, setSelectedUser] = useState(null);
     const [open, setOpen] = useState(false);
     const [updateOpen, setUpdateOpen] = useState(false);
@@ -20,7 +19,7 @@ const Dashboard = () => {
     const [course, setCourse] = useState('')
     const [number, setNumber] = useState('')
     const [data, setData] = useState([]);
-
+   
     useEffect(() => {
         const fetchData = async () => {
             const q = collection(db, "User");
@@ -34,19 +33,20 @@ const Dashboard = () => {
                         } catch (error) {
                             console.log(error);
                         }
-
+                        
                         setData((prevData) => [...prevData, userData]);
                     }
                 });
             });
-
+            
             return () => unsubscribe();
         };
-
+        
         fetchData();
     }, []);
-
-
+    
+    const router = useRouter()
+    
     const showUpdateDrawer = (userData) => {
         setSelectedUser(userData);
         setUpdateOpen(true);
@@ -335,7 +335,7 @@ const Dashboard = () => {
                                 </a>
                             </li>
                         </ul>
-                        <button className="bg-green-500 text-white p-2 rounded-lg ml-3" style={{ position: "absolute", bottom: "10px", width: "200px" }} onClick={() => { window.location.href = "Home" }}>
+                        <button className="bg-green-500 text-white p-2 rounded-lg ml-3" style={{ position: "absolute", bottom: "10px", width: "200px" }} onClick={() => {router.push('./')}}>
                             Logout
                         </button>
                     </div>

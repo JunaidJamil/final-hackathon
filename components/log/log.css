@@ -1,8 +1,37 @@
-.formss{
- width: 400px;
- height: 200px;
- display: flex;
- justify-content: center;
- align-items: center;
- margin-left: 200px;
+.forms{
+     height: 90vh;
+}
+
+.form-head {
+    margin-bottom: 10px;
+} 
+.form-head h2 {
+    font-size: 25px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifin;
+}
+
+.inputs {
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.inputs-lable {
+    margin-bottom: 20px;
+}
+
+button.sign-btn {
+    background-color: cadetblue;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.form-parent {
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
